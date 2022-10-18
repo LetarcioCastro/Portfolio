@@ -1,0 +1,21 @@
+.effect3D {
+	--x: 0deg;
+	--y: 0deg;
+}
+
+.effect3D > div {
+	pointer-events: none;
+	transform-style: preserve-3d;
+	transition: transform .2s ease-out;
+	transform: rotateY(0deg) rotateX(0deg) translateZ(0px) scale(1);
+}
+
+.effect3D:hover > div {
+	transform: rotateY(var(--x)) rotateX(var(--y)) scale(1) !important;
+}
+
+.effect3D > div * {
+	--layer: 0px;
+	transform: translateZ(var(--layer));
+}
+

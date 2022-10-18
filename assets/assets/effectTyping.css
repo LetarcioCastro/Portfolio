@@ -1,0 +1,35 @@
+.effectTyping {
+	position: relative;
+}
+
+.effectTyping::before {
+	content: '';
+	position: absolute;
+	right: -5px;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: var(--color-colorize);
+	animation: typingAnimtion 0.8s step-end infinite;
+}
+
+
+.effectTyping[typing]::before {
+	animation: none;
+}
+
+
+@keyframes typingAnimtion {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+
+}
