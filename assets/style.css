@@ -27,7 +27,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	overflow: overlay;
+	overflow-y: overlay;
+	overflow-x: hidden;
 }
 
 
